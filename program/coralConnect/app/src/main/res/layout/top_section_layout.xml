@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/top_section_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -79,6 +80,16 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <!-- raka: membuat button categoty untuk emnampilkan semua postingan -->
+
+        <!--raka: menambahkan button category paling populer berdasarkan jumlah like terbanyak-->
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/button_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="category_btn_all,category_btn_famous,category_btn_newest" />
+
+        <!--raka: menambahkan button category paling terbaru berdasarkan postingan terbaru-->
+
         <Button
             android:id="@+id/category_btn_all"
             android:layout_width="wrap_content"
@@ -91,7 +102,6 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <!--raka: menambahkan button category paling populer berdasarkan jumlah like terbanyak-->
         <Button
             android:id="@+id/category_btn_famous"
             android:layout_width="wrap_content"
@@ -105,7 +115,6 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/category_btn_all" />
 
-        <!--raka: menambahkan button category paling terbaru berdasarkan postingan terbaru-->
         <Button
             android:id="@+id/category_btn_newest"
             android:layout_width="wrap_content"
@@ -113,7 +122,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginBottom="10dp"
             android:backgroundTint="@color/material_dynamic_neutral95"
-            android:text="@string/btn_new"
+            android:text="@string/app_name"
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/category_btn_famous" />
