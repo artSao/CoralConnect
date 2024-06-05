@@ -78,6 +78,7 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <!-- raka: membuat button categoty untuk emnampilkan semua postingan -->
         <Button
             android:id="@+id/category_btn_all"
             android:layout_width="wrap_content"
@@ -90,7 +91,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
-
+        <!--raka: menambahkan button category paling populer berdasarkan jumlah like terbanyak-->
         <Button
             android:id="@+id/category_btn_famous"
             android:layout_width="wrap_content"
@@ -104,6 +105,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/category_btn_all" />
 
+        <!--raka: menambahkan button category paling terbaru berdasarkan postingan terbaru-->
         <Button
             android:id="@+id/category_btn_newest"
             android:layout_width="wrap_content"
