@@ -1,12 +1,12 @@
 package com.uti.coralconnect
 
+import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import androidx.constraintlayout.widget.Group
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -23,6 +23,9 @@ class HomeFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    private var originalButtonBackgroundColors = mutableListOf<Int>()
+    private var originalButtonTextColor = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -36,17 +39,55 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_home, container, false)
         val btnAll: Button = view.findViewById(/* id = */ R.id.category_btn_all)
+        val btnFamous: Button = view.findViewById(/* id = */ R.id.category_btn_famous)
+        val btnNewest: Button = view.findViewById(/* id = */ R.id.category_btn_newest)
 
-        val fragment = HomeFragment()
+        originalButtonBackgroundColors.add(btnAll.backgroundTintList?.defaultColor ?: Color.TRANSPARENT)
+        originalButtonBackgroundColors.add(btnFamous.backgroundTintList?.defaultColor ?: Color.TRANSPARENT)
+        originalButtonBackgroundColors.add(btnNewest.backgroundTintList?.defaultColor ?: Color.TRANSPARENT)
+        originalButtonTextColor = btnAll.currentTextColor
+
         btnAll.setOnClickListener{
+            resetButtonColors(view)
+            btnAll.setBackgroundColor(Color.BLACK)
+            btnAll.setTextColor(Color.WHITE)
             replaceFragment(ContentFragment())
         }
+
+        btnFamous.setOnClickListener{
+            resetButtonColors(view) // Mengatur ulang warna tombol
+            btnFamous.setBackgroundColor(Color.BLACK) // Ubah warna latar belakang tombol
+            btnFamous.setTextColor(Color.WHITE) // Ubah warna teks tombol
+            replaceFragment(PopularContentFragment())
+        }
+
+        btnNewest.setOnClickListener{
+            resetButtonColors(view)
+            btnNewest.setBackgroundColor(Color.BLACK)
+            btnNewest.setTextColor(Color.WHITE)
+            replaceFragment(NewstContentFragment())
+        }
+
         return view
     }
+    // Reset Warna Background dan ColorText Ketika berpindah button
+    private fun resetButtonColors(view: View) {
+        val btnAll: Button = view.findViewById(/* id = */ R.id.category_btn_all)
+        val btnFamous: Button = view.findViewById(/* id = */ R.id.category_btn_famous)
+        val btnNewest: Button = view.findViewById(/* id = */ R.id.category_btn_newest)
 
+        btnAll.setBackgroundColor(Color.WHITE)
+        btnAll.setTextColor(Color.BLACK)
+        btnFamous.setBackgroundColor(Color.WHITE)
+        btnFamous.setTextColor(Color.BLACK)
+        btnNewest.setBackgroundColor(Color.WHITE)
+        btnNewest.setTextColor(Color.BLACK)
+
+    }
     private fun replaceFragment(fragment: Fragment){
         val fragmentManager = requireActivity().supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
