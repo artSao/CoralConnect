@@ -1,21 +1,18 @@
 package com.uti.coralconnect
 
 import android.os.Bundle
-import android.os.PersistableBundle
-import android.util.Log
-import android.view.View
 import android.view.WindowManager
-import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 import com.uti.coralconnect.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity(){
 
     private lateinit var binding : ActivityMainBinding
+//    private lateinit var btnAll : Button
+//    private lateinit var btnFamous : Button
+//    private lateinit var btnNewest : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,8 +22,20 @@ class MainActivity : AppCompatActivity(){
         window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN or WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN)
         replaceFragment(HomeFragment())
 
-//        val famousButton: Button = findViewById(R.id.btn_famous)
-//        famousButton.setOnClickListener(this)
+//        // menginisialisasi tombol kategori
+//        btnAll = findViewById(R.id.category_btn_all)
+//        btnFamous = findViewById(R.id.category_btn_famous)
+//        btnNewest = findViewById(R.id.category_btn_newest)
+//
+//        // menambahkan aksi ketika diclick
+//
+//        // ketika all categori diklik
+//        btnAll.setOnClickListener(){
+//            // panggil display dengan category all
+//            displayCategory
+//        }
+
+//        val likeCountTextView : TextView = findViewById()
 
 
         binding.bottomNavigationView.setOnItemSelectedListener {
@@ -42,9 +51,11 @@ class MainActivity : AppCompatActivity(){
 
     }
 
-    private fun replaceFragment(fragment: Fragment){
+     private fun replaceFragment(fragment: Fragment){
         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.frame_layout,fragment).commit()
+        fragmentTransaction.replace(R.id.frame_layout,fragment).addToBackStack(null).commit()
     }
+
+
 }
