@@ -1,12 +1,16 @@
 package com.uti.coralconnect
 
 import android.os.Bundle
-import android.provider.Telephony.Mms.Intents
 import android.view.WindowManager
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.uti.coralconnect.databinding.ActivityMainBinding
+import com.uti.coralconnect.fragment.CameraFragment
+import com.uti.coralconnect.fragment.EventFragment
+import com.uti.coralconnect.fragment.HomeFragment
+import com.uti.coralconnect.fragment.NotificationFragment
+import com.uti.coralconnect.fragment.ProfileFragment
 
 class MainActivity : AppCompatActivity(){
 

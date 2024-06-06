@@ -5,7 +5,7 @@
     android:id="@+id/containerNewest"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NewstContentFragment">
+    tools:context=".fragment.NewstContentFragment">
 
 
     <ScrollView

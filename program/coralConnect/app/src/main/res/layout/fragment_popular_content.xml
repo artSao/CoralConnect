@@ -5,7 +5,7 @@
     android:id="@+id/popularContainer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PopularContentFragment">
+    tools:context=".fragment.PopularContentFragment">
 
     <ScrollView
         android:layout_width="match_parent"
