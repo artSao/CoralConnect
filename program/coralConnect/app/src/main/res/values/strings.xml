@@ -1,0 +1,67 @@
+<resources>
+    <string name="app_name">coralConnect</string>
+    <string name="btn_all">semua</string>
+    <string name="btn_famous">popular</string>
+    <string name="btn_new">paling baru</string>
+
+    // data for user in this field
+    <string name="name_user"><b>Amin Rais</b></string>
+    <string name="job_user">Pecinta Lingkungan</string>
+    <string name="since_user">Since 2019</string>
+    <string name="title_content"><b>Menjaga Kecantikan Bawah Laut: Kisahku</b></string>
+    <string name="desc_content">
+        Dian tumbuh besar di pesisir kecil sebuah pulau\n terpencil
+        di Indonesia. Sejak kecil, dia selalu terpesona oleh
+        keindahan alam bawah laut\nyang luar biasa di sekitarnya. Terumbu karang yang berwarna-warni dan kehidupan laut
+        yang\nberlimpah menjadi teman ajaibnya sejak usia dini.. Baca Selengkapnya.
+    </string>
+    <string name="message">message</string>
+    <string name="user_icon">user icon</string>
+    <string name="image_content">image content</string>
+    <string name="like_count">189K</string>
+    <string name="count_comment">200k</string>
+    <string name="count_share">100k</string>
+    <string name="cari_topik_disini">cari topik disini</string>
+    <string name="solar_like_outline_vektor">solar like outline vektor</string>
+    <string name="comment_section">comment section</string>
+    <string name="share_section">share section</string>
+    <string name="like_section">like section</string>
+
+    <string name="searchbar_hint">Cari topik disini</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="categori">categori</string>
+
+    <string name="this_profile">Ini activity Profile</string>
+    <string name="this_category">Ini fragment Category</string>
+    <string name="category_lifestyle">Ke fragment Lifestyle</string>
+    <string name="category_name">Category Name</string>
+    <string name="category_description">Category Description</string>
+    <string name="to_profile">Ke Halaman Profile Activity</string>
+    <string name="show_dialog">Tampilkan sebuah dialog</string>
+    <string name="hello_home_fragment">Hello Ini Home Fragment</string>
+    <string name="to_category">Ke fragment Category</string>
+    <string name="question_coach">Siapa pelatih tersukses Machester United?</string>
+    <string name="sir_alex_ferguson">Sir Alex Ferguson</string>
+    <string name="jose_mourinho">Jose Mourinho</string>
+    <string name="louis_van_gaal">Louis Van Gaal</string>
+    <string name="david_moyes">David Moyes</string>
+    <string name="choose">Pilih</string>
+    <string name="close">Tutup</string>
+    <string name="ini_event">ini event</string>
+    <string name="ini_home">ini home</string>
+    <string name="ini_notif">ini notif</string>
+    <string name="ini_profile">ini profile</string>
+    <string name="ini_camera">ini camera</string>
+    <string name="home">Home</string>
+    <string name="events">Events</string>
+    <string name="camera">Camera</string>
+    <string name="notification">Notification</string>
+    <string name="profile">Profile</string>
+    <string name="layanan_masyarakat_terhap_pemerintah"><b>Layanan masyarakat terhap pemerintah</b></string>
+    <string name="jati_nangor_bandung">Jati Nangor, Bandung</string>
+    <string name="join">Join</string>
+    <string name="lorem_ipsum_dolor_sit_amet_consectetur_adipisicing_elit_consequuntur_labore_deserunt_obcaecati_asperiores_perspiciatis_omnis_deserunt_officiis_nesciunt_est_aut">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur labore deserunt obcaecati asperiores! Perspiciatis omnis deserunt officiis nesciunt est aut.</string>
+    <string name="_22_11_2024">22/11/2024</string>
+
+</resources>
