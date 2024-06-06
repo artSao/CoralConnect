@@ -51,6 +51,8 @@ class HomeFragment : Fragment() {
         originalButtonBackgroundColors.add(btnNewest.backgroundTintList?.defaultColor ?: Color.TRANSPARENT)
         originalButtonTextColor = btnAll.currentTextColor
 
+        replaceFragment(ContentFragment())
+
         btnAll.setOnClickListener{
             resetButtonColors(view)
             btnAll.setBackgroundColor(Color.BLACK)
@@ -80,11 +82,11 @@ class HomeFragment : Fragment() {
         val btnFamous: Button = view.findViewById(/* id = */ R.id.category_btn_famous)
         val btnNewest: Button = view.findViewById(/* id = */ R.id.category_btn_newest)
 
-        btnAll.setBackgroundColor(Color.WHITE)
+        btnAll.setBackgroundColor(Color.parseColor("#f0efef"))
         btnAll.setTextColor(Color.BLACK)
-        btnFamous.setBackgroundColor(Color.WHITE)
+        btnFamous.setBackgroundColor(Color.parseColor("#f0efef"))
         btnFamous.setTextColor(Color.BLACK)
-        btnNewest.setBackgroundColor(Color.WHITE)
+        btnNewest.setBackgroundColor(Color.parseColor("#f0efef"))
         btnNewest.setTextColor(Color.BLACK)
 
     }

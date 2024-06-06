@@ -58,5 +58,10 @@
     <string name="camera">Camera</string>
     <string name="notification">Notification</string>
     <string name="profile">Profile</string>
+    <string name="layanan_masyarakat_terhap_pemerintah"><b>Layanan masyarakat terhap pemerintah</b></string>
+    <string name="jati_nangor_bandung">Jati Nangor, Bandung</string>
+    <string name="join">Join</string>
+    <string name="lorem_ipsum_dolor_sit_amet_consectetur_adipisicing_elit_consequuntur_labore_deserunt_obcaecati_asperiores_perspiciatis_omnis_deserunt_officiis_nesciunt_est_aut">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur labore deserunt obcaecati asperiores! Perspiciatis omnis deserunt officiis nesciunt est aut.</string>
+    <string name="_22_11_2024">22/11/2024</string>
 
 </resources>
