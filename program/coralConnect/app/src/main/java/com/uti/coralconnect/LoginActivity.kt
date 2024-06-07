@@ -35,7 +35,6 @@ class LoginActivity : AppCompatActivity() {
 //            loginToMain(usernameBinding,passwordBinding)
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
-            finish()
         }
 
         binding.loginWithUsername.setOnClickListener{

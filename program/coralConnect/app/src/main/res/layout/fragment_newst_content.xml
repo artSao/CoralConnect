@@ -19,9 +19,12 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#DEF3EE"
             android:orientation="vertical">
-            <include layout="@layout/content_section_layout"/>
-            <include layout="@layout/content_section_layout"/>
+
+            <include layout="@layout/content_section_layout" />
+
+            <include layout="@layout/content_section_layout" />
 
         </LinearLayout>
     </ScrollView>
