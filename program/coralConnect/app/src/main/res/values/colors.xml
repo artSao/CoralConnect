@@ -4,4 +4,8 @@
     <color name="white">#FFFFFFFF</color>
     <color name="neutral95">@color/material_dynamic_neutral95</color>
     <color name="neutral90">@color/material_dynamic_neutral90</color>
+    <color name="primaryCoral">#2BCCBD</color>
+    <color name="inputCoral">#F7F7F7</color>
+    <color name="otherCoral">#EDF0F2</color>
+    <color name="secondaryCoral">#28C2B4</color>
 </resources>

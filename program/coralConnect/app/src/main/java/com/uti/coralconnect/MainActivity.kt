@@ -6,9 +6,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.uti.coralconnect.databinding.ActivityMainBinding
-import com.uti.coralconnect.fragment.CameraFragment
 import com.uti.coralconnect.fragment.EventFragment
 import com.uti.coralconnect.fragment.HomeFragment
+import com.uti.coralconnect.fragment.LoginFragment
 import com.uti.coralconnect.fragment.NotificationFragment
 import com.uti.coralconnect.fragment.ProfileFragment
 
@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity(){
             when(it.itemId){
                 R.id.navigation_home -> replaceFragment(HomeFragment())
                 R.id.navigation_event -> replaceFragment(EventFragment())
-                R.id.navigation_camera -> replaceFragment(CameraFragment())
+                R.id.navigation_camera -> replaceFragment(LoginFragment())
                 R.id.navigation_notif -> replaceFragment(NotificationFragment())
                 R.id.navigation_profile -> replaceFragment(ProfileFragment())
             }
