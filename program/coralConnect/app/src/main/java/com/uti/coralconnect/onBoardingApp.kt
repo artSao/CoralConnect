@@ -34,7 +34,7 @@ class onBoardingApp : AppCompatActivity(), View.OnClickListener {
     override fun onClick(v: View?) {
         when (v?.id){
             R.id.btn_start -> {
-                replaceFragment(LoginFragment.newInstance("param1", "param2"))
+                replaceIntent(LoginActivity::class.java)
             }
         }
     }

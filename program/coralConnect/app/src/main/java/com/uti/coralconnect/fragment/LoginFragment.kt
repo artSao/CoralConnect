@@ -48,10 +48,7 @@ class LoginFragment : Fragment() {
         val idPasswordLogin: EditText = view.findViewById(R.id.password_login)
         val idButtonLogin: Button = view.findViewById(R.id.button_login)
 
-
         idButtonLogin.setOnClickListener {
-            val username = idInputUsernameLogin.text.toString()
-            val password = idPasswordLogin.text.toString()
             replaceFragment(Dashboard())
         }
 
