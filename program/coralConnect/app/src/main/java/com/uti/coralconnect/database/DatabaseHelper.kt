@@ -30,7 +30,7 @@ class DatabaseHelper(private val context: Context): SQLiteOpenHelper(context, DA
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
-        val dropTableQuery = "DROP TABLE IF EXIST $TABLE_NAME"
+        val dropTableQuery = "DROP TABLE IF EXISTS $TABLE_NAME"
         db?.execSQL(dropTableQuery)
         onCreate(db)
     }
