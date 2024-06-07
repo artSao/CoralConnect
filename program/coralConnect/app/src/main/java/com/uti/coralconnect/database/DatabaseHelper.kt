@@ -5,7 +5,6 @@ import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.net.UrlQuerySanitizer.ValueSanitizer
-import com.uti.coralconnect.R
 
 class DatabaseHelper(private val context: Context): SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
     companion object {
@@ -31,7 +30,7 @@ class DatabaseHelper(private val context: Context): SQLiteOpenHelper(context, DA
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
-        val dropTableQuery = context.getString(R.string.drop_table_if_exist, TABLE_NAME)
+        val dropTableQuery = "DROP TABLE IF EXIST $TABLE_NAME"
         db?.execSQL(dropTableQuery)
         onCreate(db)
     }
