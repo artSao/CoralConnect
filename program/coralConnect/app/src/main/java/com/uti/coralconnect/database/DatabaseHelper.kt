@@ -1,42 +1,58 @@
-////package com.uti.coralconnect.database
-//
-//import android.content.Context
-//import android.database.sqlite.SQLiteDatabase
-//import android.database.sqlite.SQLiteOpenHelper
-//import com.uti.coralconnect.database.model.TaskListModel
-//
-//class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DB_NAME,null, DB_VERSION){
-//
-//    companion object{
-//        private val DB_NAME = "like"
-//        private val DB_VERSION = 1
-//        private val TABLE_NAME = "tasklist"
-//        private val ID = "id"
-//        private val TASK_NAME = "taskname"
-//        private val TASK_DETAILS = "taskdetails"
-//
-//    }
-//
-//    override fun onCreate(db: SQLiteDatabase?) {
-//        val CREATE_TABLE = "CREATE TABLE $TABLE_NAME ($ID INTEGER PRIMARY KEY,$TASK_NAME,$TASK_DETAILS)"
-//        db?.execSQL(CREATE_TABLE)
-//    }
-//
-//    override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
-//        val DROP_TABLE = "DROP TABLE IF EXIST $TABLE_NAME"
-//        db?.execSQL(DROP_TABLE)
-//        onCreate(db)
-//    }
-//
-//    fun getAllTaskList(): List<TaskListModel>{
-//        val tasklist = ArrayList<TaskListModel>()
-//        val db:SQLiteDatabase! = writableDatabase
-//        val selectQuery = "SELECT * FROM $TABLE_NAME"
-//        val cursor = db.rawQuery(selectQuery,null)
-//        if(cursor != null){
-//            if (cursor.moveToFirst()){
-//                /* TODO Not Implement yet */
-//            }
-//        }
-//    }
-//}
+package com.uti.coralconnect.database
+
+import android.content.ContentValues
+import android.content.Context
+import android.database.sqlite.SQLiteDatabase
+import android.database.sqlite.SQLiteOpenHelper
+import android.net.UrlQuerySanitizer.ValueSanitizer
+import com.uti.coralconnect.R
+
+class DatabaseHelper(private val context: Context): SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
+    companion object {
+        private const val DATABASE_NAME = "Userdatabase.db"
+        private const val DATABASE_VERSION = 1
+        private const val TABLE_NAME = "data"
+        private const val COLUMN_ID = "id"
+        private const val COLUMN_USERNAME = "username"
+        private const val COLUMN_PASSWORD = "password"
+
+
+    }
+
+    override fun onCreate(db: SQLiteDatabase?) {
+        val createTableQuery = ("CREATE TABLE $TABLE_NAME ("+
+                "$$COLUMN_ID INTEGER PRIMARY KEY AUTOINCREMENT," +
+                "$COLUMN_USERNAME TEXT" +
+                "$COLUMN_PASSWORD TEXT")
+        db?.execSQL(createTableQuery)
+
+        val testingUser = "INSERT INTO $TABLE_NAME ($COLUMN_USERNAME, $COLUMN_PASSWORD) VALUES ('raka', '123');"
+        db?.execSQL(testingUser)
+    }
+
+    override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
+        val dropTableQuery = context.getString(R.string.drop_table_if_exist, TABLE_NAME)
+        db?.execSQL(dropTableQuery)
+        onCreate(db)
+    }
+
+    fun insertUser(username: String, password: String): Long{
+        val values = ContentValues().apply {
+            put(COLUMN_USERNAME, username)
+            put(COLUMN_PASSWORD, password)
+        }
+        val db = writableDatabase
+        return db.insert(TABLE_NAME,null,values)
+    }
+
+    fun readUser(username: String, password: String): Boolean{
+        val db = readableDatabase
+        val selection = "$COLUMN_USERNAME = ? AND $COLUMN_PASSWORD =?"
+        val selectionArgs = arrayOf(username,password)
+        val cursor = db.query(TABLE_NAME,null,selection,selectionArgs,null,null,null)
+
+        val userExists = cursor.count > 0
+        cursor.close()
+        return userExists
+    }
+}

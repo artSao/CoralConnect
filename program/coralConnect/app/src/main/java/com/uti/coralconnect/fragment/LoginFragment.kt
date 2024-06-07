@@ -1,5 +1,7 @@
 package com.uti.coralconnect.fragment
 
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -7,7 +9,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
+import android.widget.Toast
+import com.uti.coralconnect.MainActivity
 import com.uti.coralconnect.R
+import com.uti.coralconnect.database.DatabaseHelper
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -23,13 +29,7 @@ class LoginFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
-
-    private lateinit var tampungValueInputUsername : EditText
-    private lateinit var tampungValuePassword : EditText
-    private lateinit var btn_click_continue : Button
-
-
-
+    private lateinit var databaseHelper: DatabaseHelper
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -38,16 +38,57 @@ class LoginFragment : Fragment() {
         }
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_login,container,false)
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        val view = inflater.inflate(R.layout.fragment_login, container, false)
+        val idInputUsernameLogin: EditText = view.findViewById(R.id.username_login)
+        val idPasswordLogin: EditText = view.findViewById(R.id.password_login)
+        val idButtonLogin: Button = view.findViewById(R.id.button_login)
+
+
+        idButtonLogin.setOnClickListener {
+            val username = idInputUsernameLogin.text.toString()
+            val password = idPasswordLogin.text.toString()
+            replaceFragment(Dashboard())
+        }
+
+//        idButtonLogin.setOnClickListener {
+//            val userName = idInputUsernameLogin.text.toString()
+//            val passwordLogin = idPasswordLogin.text.toString()
+//
+//            val dbHelper = DatabaseHelper(requireContext())
+////            if{
+////                replaceFragment(HomeFragment())
+////            }else{
+////                println("Login GAGAL")
+////                val errorMessage : TextView = view.findViewById(R.id.errorMessage)
+////                errorMessage.visibility = View.VISIBLE
+////                requireActivity().finish()
+////            }
+//
+//        }
+
+        return view
     }
 
-    private fun replaceFragment(fragment: Fragment){
+    private fun loginDatabase(username: String, password: String) {
+
+    }
+
+    private fun replaceIntent(activityClass: Class<out Activity>) {
+        val intent = Intent(requireContext(), activityClass)
+        startActivity(intent)
+    }
+
+    private fun replaceFragment(fragment: Fragment) {
         val fragmentManager = requireActivity().supportFragmentManager
         val transactionFrament = fragmentManager.beginTransaction()
-        transactionFrament.add(R.id.continue_with_username,fragment).addToBackStack(null).commit()
+        transactionFrament.add(R.id.continue_with_username, fragment).addToBackStack(null).commit()
     }
+
 
     companion object {
         /**
@@ -59,12 +100,13 @@ class LoginFragment : Fragment() {
          * @return A new instance of fragment LoginFragment.
          */
         // TODO: Rename and change types and number of parameters
-        @JvmStatic fun newInstance(param1: String, param2: String) =
-                LoginFragment().apply {
-                    arguments = Bundle().apply {
-                        putString(ARG_PARAM1, param1)
-                        putString(ARG_PARAM2, param2)
-                    }
+        @JvmStatic
+        fun newInstance(param1: String, param2: String) =
+            LoginFragment().apply {
+                arguments = Bundle().apply {
+                    putString(ARG_PARAM1, param1)
+                    putString(ARG_PARAM2, param2)
                 }
+            }
     }
 }

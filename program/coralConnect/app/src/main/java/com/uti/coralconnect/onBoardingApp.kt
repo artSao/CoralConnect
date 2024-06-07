@@ -1,10 +1,12 @@
 package com.uti.coralconnect
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.view.WindowManager
 import android.widget.Button
+import android.widget.EditText
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -24,6 +26,7 @@ class onBoardingApp : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_on_boarding_app)
         window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN or WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN)
 
+
         val btnMoveGetStartlogin : Button = findViewById(R.id.btn_start)
         btnMoveGetStartlogin.setOnClickListener(this)
 
@@ -36,6 +39,11 @@ class onBoardingApp : AppCompatActivity(), View.OnClickListener {
         }
     }
 
+    private fun replaceIntent(activityClass: Class<out Activity>) {
+        val intent = Intent(this, activityClass)
+        startActivity(intent)
+        finish()
+    }
     private fun replaceFragment(fragment: Fragment) {
         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
