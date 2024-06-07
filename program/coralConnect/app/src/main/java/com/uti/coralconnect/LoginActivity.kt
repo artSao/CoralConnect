@@ -30,13 +30,9 @@ class LoginActivity : AppCompatActivity() {
         databaseHelper = DatabaseHelper(this)
 
         binding.buttonLogin.setOnClickListener {
-//            val usernameBinding = binding.usernameLogin.text.toString()
-//            val passwordBinding = binding.passwordLogin.text.toString()
-//
-//            loginToMain(usernameBinding,passwordBinding)
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-            finish()
+            val usernameBinding = binding.usernameLogin.text.toString()
+            val passwordBinding = binding.passwordLogin.text.toString()
+            loginToMain(usernameBinding,passwordBinding)
         }
     }
 
