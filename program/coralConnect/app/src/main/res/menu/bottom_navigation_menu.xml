@@ -8,10 +8,6 @@
         android:icon="@drawable/ic_round_event_note"
         android:title="@string/events" />
     <item
-        android:id="@+id/navigation_camera"
-        android:icon="@drawable/camera"
-        android:title="@string/camera" />
-    <item
         android:id="@+id/navigation_notif"
         android:icon="@drawable/notifications_24dp_fill0_wght400_grad0_opsz24"
         android:title="@string/notification"

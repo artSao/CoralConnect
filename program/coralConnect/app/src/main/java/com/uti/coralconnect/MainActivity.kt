@@ -29,7 +29,6 @@ class MainActivity : AppCompatActivity(){
             when(it.itemId){
                 R.id.navigation_home -> replaceFragment(HomeFragment())
                 R.id.navigation_event -> replaceFragment(EventFragment())
-                R.id.navigation_camera -> replaceFragment(LoginFragment())
                 R.id.navigation_notif -> replaceFragment(NotificationFragment())
                 R.id.navigation_profile -> replaceFragment(ProfileFragment())
             }
