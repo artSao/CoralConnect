@@ -25,8 +25,10 @@ class DatabaseHelper(private val context: Context): SQLiteOpenHelper(context, DA
                 "$COLUMN_PASSWORD TEXT")
         db?.execSQL(createTableQuery)
 
-        val testingUser = "INSERT INTO $TABLE_NAME ($COLUMN_USERNAME, $COLUMN_PASSWORD) VALUES ('raka', '123');"
-        db?.execSQL(testingUser)
+        val dummData = ContentValues()
+        dummData.put("username,"raka")
+        dummData.put("password","123")
+        db.insert(dummData)
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
