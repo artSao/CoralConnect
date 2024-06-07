@@ -1,5 +1,6 @@
 package com.uti.coralconnect
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -18,7 +19,23 @@ class RegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         databaseHelper = DatabaseHelper(this)
+
+
+        binding.butonContinueRegister.setOnClickListener {
+
+            val valueInputUser = binding.username.text.toString()
+            val valuePassword = binding.password.text.toString()
+
+            registerMove(valueInputUser,valuePassword)
+        }
+
+    }
+
+    private fun registerMove(username: String, password: String){
+        val inputData = databaseHelper.insertUser(username,password)
+
+        val intent = Intent(this, LoginActivity::class.java)
+        startActivity(intent)
     }
 }

@@ -5,7 +5,7 @@
     android:id="@+id/continue_with_username"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.ContinueWithUsernameFragment">
+    tools:context="">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/top"
