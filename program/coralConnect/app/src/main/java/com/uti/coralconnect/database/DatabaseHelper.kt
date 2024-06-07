@@ -30,9 +30,10 @@ class DatabaseHelper(private val context: Context): SQLiteOpenHelper(context, DA
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
-        val dropTableQuery = "DROP TABLE IF EXISTS $TABLE_NAME"
-        db?.execSQL(dropTableQuery)
-        onCreate(db)
+//        val dropTableQuery = "DROP TABLE IF EXISTS $TABLE_NAME"
+//        db?.execSQL(dropTableQuery)
+//        onCreate(db)
+
     }
 
     fun insertUser(username: String, password: String): Long{
