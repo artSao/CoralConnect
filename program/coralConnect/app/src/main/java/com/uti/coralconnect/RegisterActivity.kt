@@ -9,10 +9,12 @@ import androidx.core.view.WindowInsetsCompat
 import com.uti.coralconnect.database.DatabaseHelper
 import com.uti.coralconnect.databinding.ActivityLoginBinding
 import com.uti.coralconnect.databinding.ActivityRegisterBinding
+import com.uti.coralconnect.databinding.ActivityRegister2Binding
 
 class RegisterActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityRegisterBinding
+    private lateinit var binding: ActivityRegister2Binding
+//    private lateinit var binding: ActivityRegisterBinding
     lateinit var databaseHelper: DatabaseHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
