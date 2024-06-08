@@ -19,7 +19,7 @@ class RegisterActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityRegisterBinding.inflate(layoutInflater)
+        binding = ActivityRegister2Binding.inflate(layoutInflater)
         setContentView(binding.root)
         databaseHelper = DatabaseHelper(this)
 
