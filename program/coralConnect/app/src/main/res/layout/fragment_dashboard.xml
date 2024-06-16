@@ -8,7 +8,6 @@ android:layout_height="match_parent"
 android:background="#FFFFFF"
 tools:context=".fragment.Dashboard">
 
-
 <androidx.constraintlayout.widget.ConstraintLayout
     android:id="@+id/container_bottom"
     android:layout_width="match_parent"
