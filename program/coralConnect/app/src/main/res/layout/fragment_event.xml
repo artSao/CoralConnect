@@ -1,170 +1,171 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#DEF3EE">
+    android:background="#DEF3EE"
+    android:paddingStart="12dp"
+    android:paddingEnd="12dp"
+    android:scrollbars="none">
 
-    <ScrollView
-        android:layout_width="399dp"
-        android:layout_height="675dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="3dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <LinearLayout
+        <include
+            layout="@layout/content_event"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <include
+            layout="@layout/content_event"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <include
+            layout="@layout/content_event"
+            android:layout_width="match_parent"
+            android:layout_marginTop="12dp"
+            android:layout_height="wrap_content" />
+
+        <include
+            layout="@layout/content_event"
+            android:layout_width="match_parent"
+            android:layout_marginTop="12dp"
+            android:layout_height="wrap_content" />
+
+        <include
+            layout="@layout/content_event"
+            android:layout_width="match_parent"
+            android:layout_marginTop="12dp"
+            android:layout_height="wrap_content" />
+
+        <include
+            layout="@layout/content_event"
+            android:layout_width="match_parent"
+            android:layout_marginTop="12dp"
+            android:layout_height="wrap_content" />
+
+        <include
+            layout="@layout/content_event"
+            android:layout_width="match_parent"
+            android:layout_marginTop="12dp"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/imageView8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            tools:srcCompat="@tools:sample/avatars" />
 
-            <include
-                layout="@layout/content_event"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+        <include
+            layout="@layout/content_event"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
-            <include
-                layout="@layout/content_event"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+        <include
+            layout="@layout/content_event"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
-            <include
-                layout="@layout/content_event"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-            <include
-                layout="@layout/content_event"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-            <include
-                layout="@layout/content_event"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-            <include
-                layout="@layout/content_event"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-            <include
-                layout="@layout/content_event"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="360dp"
+            android:layout_height="492dp"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/rounded_backgound"
+            android:visibility="gone">
 
             <ImageView
-                android:id="@+id/imageView8"
-                android:layout_width="match_parent"
+                android:id="@+id/imageView5"
+                android:layout_width="342dp"
+                android:layout_height="313dp"
+                android:layout_marginStart="23dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="21dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/app_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.666"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@drawable/webinar" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:srcCompat="@tools:sample/avatars" />
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/layanan_masyarakat_terhap_pemerintah"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
-            <include
-                layout="@layout/content_event"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="272dp"
+                android:layout_height="54dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="78dp"
+                android:text="@string/lorem_ipsum_dolor_sit_amet_consectetur_adipisicing_elit_consequuntur_labore_deserunt_obcaecati_asperiores_perspiciatis_omnis_deserunt_officiis_nesciunt_est_aut"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-            <include
-                layout="@layout/content_event"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:contentDescription="@string/app_name"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2"
+                app:layout_constraintVertical_bias="0.032"
+                app:srcCompat="@android:drawable/ic_btn_speak_now" />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="360dp"
-                android:layout_height="492dp"
-                android:layout_marginStart="21dp"
-                android:layout_marginTop="60dp"
-                android:layout_marginEnd="16dp"
-                android:background="@drawable/rounded_backgound"
-                android:visibility="gone">
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginBottom="32dp"
+                android:text="@string/jati_nangor_bandung"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView7" />
 
-                <ImageView
-                    android:id="@+id/imageView5"
-                    android:layout_width="342dp"
-                    android:layout_height="313dp"
-                    android:layout_marginStart="23dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginEnd="21dp"
-                    android:adjustViewBounds="true"
-                    android:contentDescription="@string/app_name"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.666"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:srcCompat="@drawable/webinar" />
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="24dp"
+                android:backgroundTint="#070707"
+                android:text="@string/join"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
 
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="16dp"
-                    android:text="@string/layanan_masyarakat_terhap_pemerintah"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="20dp"
+                android:text="22/11/2024"
+                android:textSize="8sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="272dp"
-                    android:layout_height="54dp"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginEnd="78dp"
-                    android:text="@string/lorem_ipsum_dolor_sit_amet_consectetur_adipisicing_elit_consequuntur_labore_deserunt_obcaecati_asperiores_perspiciatis_omnis_deserunt_officiis_nesciunt_est_aut"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <ImageView
-                    android:id="@+id/imageView7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="10dp"
-                    android:contentDescription="@string/app_name"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView2"
-                    app:layout_constraintVertical_bias="0.032"
-                    app:srcCompat="@android:drawable/ic_btn_speak_now" />
+    </LinearLayout>
 
-                <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginBottom="32dp"
-                    android:text="@string/jati_nangor_bandung"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/imageView7" />
-
-                <Button
-                    android:id="@+id/button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="12dp"
-                    android:layout_marginBottom="24dp"
-                    android:backgroundTint="#070707"
-                    android:text="@string/join"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" />
-
-                <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="20dp"
-                    android:text="22/11/2024"
-                    android:textSize="8sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView5" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-        </LinearLayout>
-    </ScrollView>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
