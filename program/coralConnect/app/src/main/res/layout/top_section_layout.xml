@@ -1,97 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/top_section_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:padding="12dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_bottom_left_right_view_background"
+    android:backgroundTint="#DEF3EE"
+    android:orientation="vertical"
+    app:cardCornerRadius="21dp"
     tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <SearchView
+            android:id="@+id/searchview_display"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:background="@drawable/searchview_background"
+            android:backgroundTint="@color/primaryCoral"
+            android:iconifiedByDefault="false"
+            android:queryBackground="@android:color/transparent"
+            android:queryHint="@string/cari_topik_disini" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:src="@drawable/message" />
+
+    </LinearLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/top_section"
-        android:layout_width="390dp"
-        android:layout_height="235dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="@drawable/rounded_bottom_left_right_view_background"
         android:backgroundTint="#DEF3EE"
         android:elevation="4dp"
-        app:cardCornerRadius="21dp"
+        android:layout_marginTop="12dp"
+        app:cardCornerRadius="22dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintCircleRadius="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/notif_search_icon"
-            android:layout_width="match_parent"
-            android:layout_height="140dp"
-            android:layout_marginTop="1dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/searchview_container"
-                android:layout_width="291dp"
-                android:layout_height="100dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/message_icon_container"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1.0">
-
-
-                <SearchView
-                    android:id="@+id/searchview_display"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginBottom="4dp"
-                    android:background="@drawable/searchview_background"
-                    android:backgroundTint="@color/primaryCoral"
-                    android:iconifiedByDefault="false"
-                    android:maxWidth="488dp"
-                    android:queryBackground="@android:color/transparent"
-                    android:queryHint="@string/cari_topik_disini"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toStartOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/message_icon_container"
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/searchview_container"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:layout_marginTop="60dp"
-                    android:contentDescription="@string/message"
-                    android:padding="30dp"
-                    android:src="@drawable/message"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <!-- raka: membuat button categoty untuk emnampilkan semua postingan -->
-
-        <!--raka: menambahkan button category paling populer berdasarkan jumlah like terbanyak-->
-        <androidx.constraintlayout.widget.Group
-            android:id="@+id/button_group"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:constraint_referenced_ids="category_btn_all,category_btn_famous,category_btn_newest" />
-
-        <!--raka: menambahkan button category paling terbaru berdasarkan postingan terbaru-->
 
         <Button
             android:id="@+id/category_btn_all"
@@ -132,4 +91,4 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
