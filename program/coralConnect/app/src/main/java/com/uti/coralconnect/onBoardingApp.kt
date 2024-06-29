@@ -6,15 +6,10 @@ import android.os.Bundle
 import android.view.View
 import android.view.WindowManager
 import android.widget.Button
-import android.widget.EditText
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
-import com.uti.coralconnect.R.id.main
 import com.uti.coralconnect.databinding.ActivityOnBoardingAppBinding
-import com.uti.coralconnect.fragment.LoginFragment
 
 class onBoardingApp : AppCompatActivity(), View.OnClickListener {
 

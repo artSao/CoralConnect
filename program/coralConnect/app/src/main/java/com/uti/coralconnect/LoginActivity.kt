@@ -42,7 +42,6 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
-
     private fun loginToMain(username: String, password: String){
         val userExist = databaseHelper.readUser(username,password)
         if (userExist){

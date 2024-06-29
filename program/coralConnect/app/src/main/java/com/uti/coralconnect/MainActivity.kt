@@ -8,7 +8,6 @@ import androidx.fragment.app.Fragment
 import com.uti.coralconnect.databinding.ActivityMainBinding
 import com.uti.coralconnect.fragment.EventFragment
 import com.uti.coralconnect.fragment.HomeFragment
-import com.uti.coralconnect.fragment.LoginFragment
 import com.uti.coralconnect.fragment.NotificationFragment
 import com.uti.coralconnect.fragment.ProfileFragment
 
